@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="100%" height="240" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e17" />
+      <stop offset="50%" stop-color="#0d1524" />
+      <stop offset="100%" stop-color="#071318" />
+    </linearGradient>
+
+    <!-- Neon Mint Gradient for Highlights -->
+    <linearGradient id="neonMint" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F7A7" />
+      <stop offset="50%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#00F7A7" />
+    </linearGradient>
+
+    <!-- Ambient Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="25" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Dot Pattern -->
+    <pattern id="dotGrid" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#1e293b" opacity="0.6" />
+    </pattern>
+  </defs>
+
+  <style>
+    .title { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; font-weight: 800; font-size: 40px; fill: #ffffff; letter-spacing: -0.5px; }
+    .subtitle { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; font-weight: 500; font-size: 17px; fill: #94a3b8; }
+    .badge-text { font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace; font-size: 11px; font-weight: 600; fill: #00F7A7; }
+    .pill-text { font-family: 'Segoe UI', -apple-system, sans-serif; font-size: 12px; font-weight: 600; fill: #cbd5e1; }
+    .code-accent { font-family: 'JetBrains Mono', Consolas, monospace; font-size: 13px; fill: #38bdf8; opacity: 0.8; }
+  </style>
+
+  <!-- Card Background -->
+  <rect width="900" height="240" rx="16" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="1.5" />
+  <rect width="900" height="240" rx="16" fill="url(#dotGrid)" />
+
+  <!-- Neon Ambient Glows -->
+  <circle cx="820" cy="40" r="120" fill="#00F7A7" opacity="0.08" filter="url(#glow)" />
+  <circle cx="100" cy="200" r="100" fill="#38BDF8" opacity="0.06" filter="url(#glow)" />
+
+  <!-- Decorative Wave Grid on the Right -->
+  <g opacity="0.25">
+    <path d="M 620,180 C 680,100 740,240 820,140 C 860,90 900,120 920,80" fill="none" stroke="#00F7A7" stroke-width="2" stroke-dasharray="4 4" />
+    <path d="M 640,200 C 700,120 760,260 840,160 C 880,110 920,140 940,100" fill="none" stroke="#38BDF8" stroke-width="1.5" />
+    <path d="M 600,160 C 660,80 720,220 800,120 C 840,70 880,100 900,60" fill="none" stroke="#6366f1" stroke-width="1" />
+  </g>
+
+  <!-- Status Pill (Top Left) -->
+  <g transform="translate(50, 36)">
+    <rect width="180" height="26" rx="13" fill="#052e16" stroke="#00F7A7" stroke-width="1" opacity="0.9" />
+    <circle cx="14" cy="13" r="4" fill="#00F7A7">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="26" y="17" class="badge-text">OPEN TO OPPORTUNITIES</text>
+  </g>
+
+  <!-- Code Tag Accent -->
+  <text x="245" y="54" class="code-accent">&lt;dev&gt;</text>
+
+  <!-- Main Name Title -->
+  <text x="50" y="112" class="title">Jefferson Martínez</text>
+
+  <!-- Subtitle -->
+  <text x="50" y="142" class="subtitle">Full Stack Developer &amp; Software Quality Assurance (QA)</text>
+
+  <!-- Tech Pills Row -->
+  <g transform="translate(50, 168)">
+    <!-- Pill 1: .NET -->
+    <rect x="0" y="0" width="85" height="28" rx="6" fill="#1e293b" stroke="#334155" />
+    <text x="42" y="18" text-anchor="middle" class="pill-text">.NET Core</text>
+
+    <!-- Pill 2: C# -->
+    <rect x="95" y="0" width="50" height="28" rx="6" fill="#1e293b" stroke="#334155" />
+    <text x="120" y="18" text-anchor="middle" class="pill-text">C#</text>
+
+    <!-- Pill 3: Vue.js -->
+    <rect x="155" y="0" width="75" height="28" rx="6" fill="#1e293b" stroke="#334155" />
+    <text x="192" y="18" text-anchor="middle" class="pill-text">Vue.js</text>
+
+    <!-- Pill 4: Angular -->
+    <rect x="240" y="0" width="80" height="28" rx="6" fill="#1e293b" stroke="#334155" />
+    <text x="280" y="18" text-anchor="middle" class="pill-text">Angular</text>
+
+    <!-- Pill 5: SQL Server -->
+    <rect x="330" y="0" width="95" height="28" rx="6" fill="#1e293b" stroke="#334155" />
+    <text x="377" y="18" text-anchor="middle" class="pill-text">SQL Server</text>
+
+    <!-- Pill 6: Swagger/QA -->
+    <rect x="435" y="0" width="80" height="28" rx="6" fill="#1e293b" stroke="#334155" />
+    <text x="475" y="18" text-anchor="middle" class="pill-text">Swagger</text>
+
+    <!-- Pill 7: xUnit -->
+    <rect x="525" y="0" width="65" height="28" rx="6" fill="#1e293b" stroke="#334155" />
+    <text x="557" y="18" text-anchor="middle" class="pill-text">xUnit</text>
+  </g>
+
+  <!-- Right Side Visual Icon / Graphic -->
+  <g transform="translate(730, 75)" opacity="0.9">
+    <rect width="110" height="90" rx="10" fill="#0f172a" stroke="#00F7A7" stroke-width="1.2" opacity="0.8" />
+    <!-- Terminal header dots -->
+    <circle cx="16" cy="16" r="3.5" fill="#ef4444" />
+    <circle cx="28" cy="16" r="3.5" fill="#f59e0b" />
+    <circle cx="40" cy="16" r="3.5" fill="#10b981" />
+    <!-- Code lines inside mini terminal -->
+    <path d="M 16,36 L 40,36" stroke="#00F7A7" stroke-width="2" stroke-linecap="round" />
+    <path d="M 46,36 L 85,36" stroke="#64748b" stroke-width="2" stroke-linecap="round" />
+    <path d="M 16,50 L 60,50" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" />
+    <path d="M 16,64 L 75,64" stroke="#a855f7" stroke-width="2" stroke-linecap="round" />
+    <path d="M 16,78 L 35,78" stroke="#10b981" stroke-width="2" stroke-linecap="round" />
+  </g>
+</svg>

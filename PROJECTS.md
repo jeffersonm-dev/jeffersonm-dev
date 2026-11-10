@@ -8,8 +8,12 @@
   <img src="https://img.shields.io/badge/←_Volver_al_Perfil_Principal-0d1117?style=flat-square&logo=github&logoColor=00f7a7" alt="Volver" />
 </a>
 &nbsp;
-<a href="https://wa.me/584167071715">
-  <img src="https://img.shields.io/badge/Contactar_por_WhatsApp-25D366?style=flat-square&logo=whatsapp&logoColor=white" alt="WhatsApp" />
+<a href="https://wa.me/584145572936?text=Hola%20Jefferson,%20vi%20tu%20proyecto%20en%20GitHub%20y%20me%20gustar%C3%ADa%20conversar">
+  <img src="https://img.shields.io/badge/WhatsApp-+58_414--5572936-25D366?style=flat-square&logo=whatsapp&logoColor=white" alt="WhatsApp" />
+</a>
+&nbsp;
+<a href="mailto:jefferson.martinez.dev@gmail.com">
+  <img src="https://img.shields.io/badge/Email-jefferson.martinez.dev%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email" />
 </a>
 
 </div>
@@ -28,7 +32,7 @@
 </p>
 
 ### 🎯 Descripción General
-Servicio backend de nivel profesional estructurado bajo principios de Clean Architecture y Repository Pattern. Ofrece endpoints protegidos y documentados en tiempo real mediante Swagger UI, facilitando el consumo por parte de clientes web y móviles.
+Servicio backend de nivel profesional estructurado bajo principios de Clean Architecture y Repository Pattern. Ofrece endpoints protegidos y documentados en tiempo real mediante Swagger UI, facilitando el consumo seguro y eficiente por parte de clientes web y móviles.
 
 ### ✨ Aspectos Clave
 - **Documentación Interactiva:** Especificaciones OpenAPI 3.0 mediante Swagger con soporte para envío directo de tokens Bearer.
@@ -147,8 +151,12 @@ Ecosistema de pruebas continuas diseñado para validar la integridad de APIs cr�
   <img src="https://img.shields.io/badge/←_Volver_al_Perfil_Principal-0d1117?style=flat-square&logo=github&logoColor=00f7a7" alt="Volver" />
 </a>
 &nbsp;
-<a href="https://wa.me/584167071715">
-  <img src="https://img.shields.io/badge/¿Tienes_un_proyecto?_¡Hablemos!-25D366?style=flat-square&logo=whatsapp&logoColor=white" alt="Contactar" />
+<a href="https://wa.me/584145572936?text=Hola%20Jefferson,%20vi%20tu%20proyecto%20en%20GitHub%20y%20me%20gustar%C3%ADa%20conversar">
+  <img src="https://img.shields.io/badge/WhatsApp-+58_414--5572936-25D366?style=flat-square&logo=whatsapp&logoColor=white" alt="Contactar" />
+</a>
+&nbsp;
+<a href="mailto:jefferson.martinez.dev@gmail.com">
+  <img src="https://img.shields.io/badge/Email-jefferson.martinez.dev%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email" />
 </a>
 
 <br/><br/>

@@ -1,115 +1,192 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="100%" height="240" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 260" width="100%" height="260" fill="none">
   <defs>
-    <!-- Background Gradient -->
+    <!-- Background Deep Navy/Cyber Gradient -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0a0e17" />
-      <stop offset="50%" stop-color="#0d1524" />
-      <stop offset="100%" stop-color="#071318" />
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0d1527" />
+      <stop offset="100%" stop-color="#07151a" />
     </linearGradient>
 
-    <!-- Neon Mint Gradient for Highlights -->
-    <linearGradient id="neonMint" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00F7A7" />
-      <stop offset="50%" stop-color="#38BDF8" />
+    <!-- Animated Neon Border Gradient -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F7A7">
+        <animate attributeName="stop-color" values="#00F7A7;#38BDF8;#818CF8;#00F7A7" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#38BDF8">
+        <animate attributeName="stop-color" values="#38BDF8;#818CF8;#00F7A7;#38BDF8" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#00F7A7">
+        <animate attributeName="stop-color" values="#00F7A7;#38BDF8;#818CF8;#00F7A7" dur="6s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <!-- Gradient for Text Highlights -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#f1f5f9" />
       <stop offset="100%" stop-color="#00F7A7" />
+    </linearGradient>
+
+    <!-- Neon Mint Gradient for Tech Highlights -->
+    <linearGradient id="mintSky" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F7A7" />
+      <stop offset="100%" stop-color="#38BDF8" />
     </linearGradient>
 
     <!-- Ambient Glow Filter -->
     <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="25" result="blur" />
+      <feGaussianBlur stdDeviation="28" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
 
     <!-- Dot Pattern -->
-    <pattern id="dotGrid" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1.2" fill="#1e293b" opacity="0.6" />
+    <pattern id="dotGrid" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.1" fill="#1e293b" opacity="0.65" />
     </pattern>
   </defs>
 
   <style>
-    .title { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; font-weight: 800; font-size: 40px; fill: #ffffff; letter-spacing: -0.5px; }
+    .title { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif; font-weight: 800; font-size: 42px; fill: url(#textGrad); letter-spacing: -0.8px; }
     .subtitle { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; font-weight: 500; font-size: 17px; fill: #94a3b8; }
-    .badge-text { font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace; font-size: 11px; font-weight: 600; fill: #00F7A7; }
-    .pill-text { font-family: 'Segoe UI', -apple-system, sans-serif; font-size: 12px; font-weight: 600; fill: #cbd5e1; }
-    .code-accent { font-family: 'JetBrains Mono', Consolas, monospace; font-size: 13px; fill: #38bdf8; opacity: 0.8; }
+    .badge-text { font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace; font-size: 11px; font-weight: 700; fill: #00F7A7; letter-spacing: 0.5px; }
+    .pill-text { font-family: 'Segoe UI', -apple-system, sans-serif; font-size: 12px; font-weight: 600; fill: #e2e8f0; }
+    .code-accent { font-family: 'JetBrains Mono', Consolas, monospace; font-size: 14px; fill: #38bdf8; font-weight: 600; }
+    .mono-accent { font-family: 'JetBrains Mono', Consolas, monospace; font-size: 12px; fill: #64748b; }
   </style>
 
   <!-- Card Background -->
-  <rect width="900" height="240" rx="16" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="1.5" />
-  <rect width="900" height="240" rx="16" fill="url(#dotGrid)" />
+  <rect width="940" height="260" rx="18" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="1.8" />
+  <rect width="940" height="260" rx="18" fill="url(#dotGrid)" />
 
-  <!-- Neon Ambient Glows -->
-  <circle cx="820" cy="40" r="120" fill="#00F7A7" opacity="0.08" filter="url(#glow)" />
-  <circle cx="100" cy="200" r="100" fill="#38BDF8" opacity="0.06" filter="url(#glow)" />
+  <!-- Ambient Pulsing Glow Orbs -->
+  <circle cx="860" cy="50" r="130" fill="#00F7A7" opacity="0.09" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.06;0.14;0.06" dur="4s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="80" cy="220" r="110" fill="#38BDF8" opacity="0.08" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.05;0.12;0.05" dur="5s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="500" cy="30" r="90" fill="#818CF8" opacity="0.05" filter="url(#glow)" />
 
-  <!-- Decorative Wave Grid on the Right -->
-  <g opacity="0.25">
-    <path d="M 620,180 C 680,100 740,240 820,140 C 860,90 900,120 920,80" fill="none" stroke="#00F7A7" stroke-width="2" stroke-dasharray="4 4" />
-    <path d="M 640,200 C 700,120 760,260 840,160 C 880,110 920,140 940,100" fill="none" stroke="#38BDF8" stroke-width="1.5" />
-    <path d="M 600,160 C 660,80 720,220 800,120 C 840,70 880,100 900,60" fill="none" stroke="#6366f1" stroke-width="1" />
+  <!-- Decorative Animated Wave Lines in Background -->
+  <g opacity="0.32">
+    <path d="M 620,190 C 690,110 750,250 830,150 C 870,100 910,130 940,90" fill="none" stroke="#00F7A7" stroke-width="2" stroke-dasharray="6 4">
+      <animate attributeName="stroke-dashoffset" values="0;40" dur="8s" repeatCount="indefinite" />
+    </path>
+    <path d="M 640,210 C 710,130 770,270 850,170 C 890,120 930,150 960,110" fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="4 4" />
+    <path d="M 600,170 C 670,90 730,230 810,130 C 850,80 890,110 920,70" fill="none" stroke="#818CF8" stroke-width="1" />
   </g>
 
-  <!-- Status Pill (Top Left) -->
+  <!-- Status Pill (Top Left): Live Pulsing Available for Work -->
   <g transform="translate(50, 36)">
-    <rect width="180" height="26" rx="13" fill="#052e16" stroke="#00F7A7" stroke-width="1" opacity="0.9" />
-    <circle cx="14" cy="13" r="4" fill="#00F7A7">
-      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" />
+    <rect width="195" height="28" rx="14" fill="#042f1a" stroke="#00F7A7" stroke-width="1.2" opacity="0.95" />
+    <!-- Pulsing Radar Ring -->
+    <circle cx="16" cy="14" r="6" fill="none" stroke="#00F7A7" stroke-width="1.5" opacity="0.7">
+      <animate attributeName="r" values="3;9" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8;0" dur="2s" repeatCount="indefinite" />
     </circle>
-    <text x="26" y="17" class="badge-text">OPEN TO OPPORTUNITIES</text>
+    <!-- Solid Dot -->
+    <circle cx="16" cy="14" r="4" fill="#00F7A7" />
+    <text x="30" y="18" class="badge-text">DISPONIBLE / OPEN TO WORK</text>
   </g>
 
-  <!-- Code Tag Accent -->
-  <text x="245" y="54" class="code-accent">&lt;dev&gt;</text>
+  <!-- Tag Accent -->
+  <g transform="translate(260, 36)">
+    <text x="0" y="19" class="code-accent">&lt;fullstack-qa&gt;</text>
+  </g>
 
-  <!-- Main Name Title -->
-  <text x="50" y="112" class="title">Jefferson Martínez</text>
+  <!-- Main Name Title with animated cursor -->
+  <g transform="translate(50, 118)">
+    <text x="0" y="0" class="title">Jefferson Martínez</text>
+    <rect x="428" y="-34" width="3" height="40" fill="#00F7A7">
+      <animate attributeName="opacity" values="1;0;1" dur="1.1s" repeatCount="indefinite" />
+    </rect>
+  </g>
 
-  <!-- Subtitle -->
-  <text x="50" y="142" class="subtitle">Full Stack Developer &amp; Software Quality Assurance (QA)</text>
+  <!-- Subtitle with dynamic emphasis -->
+  <g transform="translate(50, 150)">
+    <text x="0" y="0" class="subtitle">Full Stack Developer &amp; QA Software Tester • Arquitectura .NET &amp; Frontend Moderno</text>
+  </g>
 
-  <!-- Tech Pills Row -->
-  <g transform="translate(50, 168)">
-    <!-- Pill 1: .NET -->
-    <rect x="0" y="0" width="85" height="28" rx="6" fill="#1e293b" stroke="#334155" />
-    <text x="42" y="18" text-anchor="middle" class="pill-text">.NET Core</text>
+  <!-- Tech Pills Row with sleek border highlights -->
+  <g transform="translate(50, 180)">
+    <!-- Pill 1: .NET Core -->
+    <g transform="translate(0, 0)">
+      <rect width="96" height="30" rx="7" fill="#131d31" stroke="#512BD4" stroke-width="1.2" />
+      <circle cx="13" cy="15" r="4" fill="#512BD4" />
+      <text x="56" y="20" text-anchor="middle" class="pill-text">.NET Core</text>
+    </g>
 
     <!-- Pill 2: C# -->
-    <rect x="95" y="0" width="50" height="28" rx="6" fill="#1e293b" stroke="#334155" />
-    <text x="120" y="18" text-anchor="middle" class="pill-text">C#</text>
+    <g transform="translate(104, 0)">
+      <rect width="60" height="30" rx="7" fill="#131d31" stroke="#239120" stroke-width="1.2" />
+      <circle cx="13" cy="15" r="4" fill="#239120" />
+      <text x="36" y="20" text-anchor="middle" class="pill-text">C#</text>
+    </g>
 
-    <!-- Pill 3: Vue.js -->
-    <rect x="155" y="0" width="75" height="28" rx="6" fill="#1e293b" stroke="#334155" />
-    <text x="192" y="18" text-anchor="middle" class="pill-text">Vue.js</text>
+    <!-- Pill 3: Vue.js 3 -->
+    <g transform="translate(172, 0)">
+      <rect width="90" height="30" rx="7" fill="#131d31" stroke="#4FC08D" stroke-width="1.2" />
+      <circle cx="13" cy="15" r="4" fill="#4FC08D" />
+      <text x="52" y="20" text-anchor="middle" class="pill-text">Vue.js 3</text>
+    </g>
 
     <!-- Pill 4: Angular -->
-    <rect x="240" y="0" width="80" height="28" rx="6" fill="#1e293b" stroke="#334155" />
-    <text x="280" y="18" text-anchor="middle" class="pill-text">Angular</text>
+    <g transform="translate(270, 0)">
+      <rect width="88" height="30" rx="7" fill="#131d31" stroke="#DD0031" stroke-width="1.2" />
+      <circle cx="13" cy="15" r="4" fill="#DD0031" />
+      <text x="51" y="20" text-anchor="middle" class="pill-text">Angular</text>
+    </g>
 
     <!-- Pill 5: SQL Server -->
-    <rect x="330" y="0" width="95" height="28" rx="6" fill="#1e293b" stroke="#334155" />
-    <text x="377" y="18" text-anchor="middle" class="pill-text">SQL Server</text>
+    <g transform="translate(366, 0)">
+      <rect width="102" height="30" rx="7" fill="#131d31" stroke="#CC2927" stroke-width="1.2" />
+      <circle cx="13" cy="15" r="4" fill="#CC2927" />
+      <text x="58" y="20" text-anchor="middle" class="pill-text">SQL Server</text>
+    </g>
 
-    <!-- Pill 6: Swagger/QA -->
-    <rect x="435" y="0" width="80" height="28" rx="6" fill="#1e293b" stroke="#334155" />
-    <text x="475" y="18" text-anchor="middle" class="pill-text">Swagger</text>
+    <!-- Pill 6: Swagger/API -->
+    <g transform="translate(476, 0)">
+      <rect width="88" height="30" rx="7" fill="#131d31" stroke="#85EA2D" stroke-width="1.2" />
+      <circle cx="13" cy="15" r="4" fill="#85EA2D" />
+      <text x="51" y="20" text-anchor="middle" class="pill-text">Swagger</text>
+    </g>
 
-    <!-- Pill 7: xUnit -->
-    <rect x="525" y="0" width="65" height="28" rx="6" fill="#1e293b" stroke="#334155" />
-    <text x="557" y="18" text-anchor="middle" class="pill-text">xUnit</text>
+    <!-- Pill 7: QA & Testing -->
+    <g transform="translate(572, 0)">
+      <rect width="98" height="30" rx="7" fill="#131d31" stroke="#00F7A7" stroke-width="1.2" />
+      <circle cx="13" cy="15" r="4" fill="#00F7A7" />
+      <text x="56" y="20" text-anchor="middle" class="pill-text">xUnit / QA</text>
+    </g>
   </g>
 
-  <!-- Right Side Visual Icon / Graphic -->
-  <g transform="translate(730, 75)" opacity="0.9">
-    <rect width="110" height="90" rx="10" fill="#0f172a" stroke="#00F7A7" stroke-width="1.2" opacity="0.8" />
-    <!-- Terminal header dots -->
-    <circle cx="16" cy="16" r="3.5" fill="#ef4444" />
-    <circle cx="28" cy="16" r="3.5" fill="#f59e0b" />
-    <circle cx="40" cy="16" r="3.5" fill="#10b981" />
-    <!-- Code lines inside mini terminal -->
-    <path d="M 16,36 L 40,36" stroke="#00F7A7" stroke-width="2" stroke-linecap="round" />
-    <path d="M 46,36 L 85,36" stroke="#64748b" stroke-width="2" stroke-linecap="round" />
-    <path d="M 16,50 L 60,50" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" />
-    <path d="M 16,64 L 75,64" stroke="#a855f7" stroke-width="2" stroke-linecap="round" />
-    <path d="M 16,78 L 35,78" stroke="#10b981" stroke-width="2" stroke-linecap="round" />
+  <!-- Interactive Right-side Cyber Terminal Mockup -->
+  <g transform="translate(745, 65)">
+    <!-- Terminal Box -->
+    <rect width="145" height="135" rx="12" fill="#090d16" stroke="#1e293b" stroke-width="1.5" />
+    <rect width="145" height="135" rx="12" fill="none" stroke="url(#mintSky)" stroke-width="1" opacity="0.6" />
+
+    <!-- Terminal header bar -->
+    <rect width="145" height="26" rx="12" fill="#0f172a" />
+    <circle cx="16" cy="13" r="3.5" fill="#ef4444" />
+    <circle cx="28" cy="13" r="3.5" fill="#f59e0b" />
+    <circle cx="40" cy="13" r="3.5" fill="#10b981" />
+    <text x="65" y="16" class="mono-accent" font-size="9">bash ~ jeff</text>
+
+    <!-- Code lines with animations -->
+    <g transform="translate(14, 42)">
+      <!-- Prompt line 1 -->
+      <text x="0" y="8" class="badge-text" font-size="10">$ dotnet build</text>
+      <text x="0" y="22" font-family="'JetBrains Mono', monospace" font-size="9" fill="#10b981">✓ Build 0 Errors</text>
+
+      <!-- Prompt line 2 -->
+      <text x="0" y="38" class="badge-text" font-size="10">$ test-runner</text>
+      <text x="0" y="52" font-family="'JetBrains Mono', monospace" font-size="9" fill="#38bdf8">✓ 48 Tests Passed</text>
+
+      <!-- Status prompt line 3 -->
+      <text x="0" y="68" class="badge-text" font-size="10">$ deploy --live</text>
+      <rect x="0" y="74" width="70" height="3" rx="1.5" fill="#00F7A7">
+        <animate attributeName="width" values="10;115;115" dur="3s" repeatCount="indefinite" />
+      </rect>
+    </g>
   </g>
 </svg>
